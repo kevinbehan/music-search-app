@@ -31,7 +31,6 @@
         albums.appendChild(noAlbumsLi)
     }
     function renderAlbum(album){
-        console.log(album)
         const albumCtr = document.createElement('li')
         albumCtr.innerHTML = `<div class="album-wrap">
                   <img class="album-art" src=${album.images[0].url}>
@@ -52,11 +51,9 @@
     }
     //the two functions below toggle what event listeners are attached to the search input
     function deactivateSearch() {
-        console.log('search deactivated')
         search.removeEventListener('keypress', checkForEnter)
     }
     function activateSearch(){
-        console.log('search activated')
         search.addEventListener('focus', activateAlbumSearchOnEnter)
     }
     function preventEnterSend(evt){
